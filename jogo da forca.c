@@ -9,14 +9,14 @@ int main(){
 	int tamanho, pontos=0, retorno, contador, contador2=0, vidas;
 	// Definir idioma do software.
 	setlocale(LC_ALL, "Portuguese");
-	topoJogo(); // Apenas exibe a função topo.
+	topoJogo(); // Apenas exibe a funÃ§Ã£o topo.
 	//Salvar nome dos jogadores.
 	printf("Player 1, digite o seu nome: ");
 	gets(nomep1);
 	printf("Player 2, digite o seu nome: ");
 	gets(nomep2);
 	system("cls");
-	topoJogo();// Apenas exibe a função topo.
+	topoJogo();// Apenas exibe a funÃ§Ã£o topo.
 	// Salvar a palavra a ser advinhada.
 	printf("%s, digite a palavra para %s advinhar: ",nomep1, nomep2);
 	gets(palavra);
@@ -34,7 +34,7 @@ int main(){
 			if(vidas<5){
 				printf("Letras digitadas %s\n", erros);
 			}
-			// For para verificar se a letra está correta ou não.
+			// For para verificar se a letra estÃ¡ correta ou nÃ£o.
 			for(contador = 0; contador<strlen(palavra);contador++){
 				if (letra[0]==palavra[contador]){
                     letraoculta[contador] = palavra[contador];
@@ -45,29 +45,29 @@ int main(){
 			if(retorno==0){
 				vidas--;
 				if(vidas == 0){
-					printf("\nQue pena, você perdeu.\n");
+					printf("\nQue pena, vocÃª perdeu.\n");
 					printf("A palavra correta era: %s\n",palavra);
 					system("pause");
 				}else{
-					printf("Você errou uma letra. Restam apenas %d vidas.\n", vidas);
+					printf("VocÃª errou uma letra. Restam apenas %d vidas.\n", vidas);
 					erros[contador2]=letra[0];
 					contador2++;
 					system("pause");
 					system("cls");
-					topoJogo(); // Apenas exibe a função topo.
+					topoJogo(); // Apenas exibe a funÃ§Ã£o topo.
 				}
 			// Mensagens de acerto.
 			}else{
 				if(pontos==tamanho){
-					printf("Você acertou a palavra, parabéns %s\n",nomep2);
+					printf("VocÃª acertou a palavra, parabÃ©ns %s\n",nomep2);
                     system("pause");
                     vidas=0;
 				}else{
-                    printf("Você acertou uma letra, Parabéns...\n");
+                    printf("VocÃª acertou uma letra, ParabÃ©ns...\n");
                     pontos++;
                     system("pause");
                     system("cls");
-					topoJogo(); // Apenas exibe a função topo.
+					topoJogo(); // Apenas exibe a funÃ§Ã£o topo.
 				}
 			}
 		}
@@ -78,6 +78,6 @@ int main(){
 void topoJogo(){
     printf("-------------------------------------------------------\n");
 	printf("------------ Jogo da Forca com 2 jogadores ------------\n");
-	printf("- Quando você souber a palavra, digite-a por completo -\n");
+	printf("- Quando vocÃª souber a palavra, digite-a por completo -\n");
 	printf("-------------------------------------------------------\n\n");
 }
